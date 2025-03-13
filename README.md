@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+A React + TypeScript web application for tracking income, expenses, and budget. Features dark mode, currency conversion, budget tracking, and data persistence using localStorage. Built with a clean UI and interactive visualizations.
+![image](https://github.com/user-attachments/assets/3abec8d7-e86d-4d8d-984f-1b1daa603a81)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Track Expenses & Income – Add, delete, and view all your financial transactions.
+Budget Management – Set a budget and track remaining balance dynamically.
+Dark Mode Support – Toggle between light and dark themes.
+Currency Conversion – Select different currencies (USD, EUR, etc.) with real-time exchange rates.
+Pie Chart Visualization – See a breakdown of expenses by category using Chart.js.
+Persistent Data – Saves expenses, budget, and income even after refreshing.
+Export to CSV – Download all expenses as a CSV file for offline tracking.
+Clear Data Option – Reset everything for a fresh start with a single click.
 
-Currently, two official plugins are available:
+Dependencies
+React – Frontend framework
+TypeScript – Type safety and better development experience
+Chart.js – Data visualization for expense breakdown
+File-Saver – Enables CSV export functionality
+Exchange Rate API – Fetches real-time currency conversion rates
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation
+1. Clone the Repository
+2. Install Dependencies (npm install)
+3. Start the Application (npm start)
 
-## Expanding the ESLint configuration
+Live Demo
+Try it here! https://expense-tracker-react-five-mu.vercel.app/
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+How to Use
+1. Enter an expense description, amount, and category, then click "Add Expense".
+2. View all expenses in the list with a total balance update.
+3. Set an income and budget to track remaining balance.
+4. Use the currency dropdown to change the currency dynamically.
+5. Toggle Dark Mode for a different theme.
+6. Click "Export CSV" to save your expenses as a file.
+7. Click "Clear Data" to reset all values and start fresh.
